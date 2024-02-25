@@ -84,7 +84,7 @@ export function Form() {
       >
         <ButtonRoot.Button
           disabled={loading || !isValid}
-          className="mt-4 bg-primaryYellow text-black cursor-pointer hover:opacity-90 disabled:bg-gray-500 text-white "
+          className="mt-4 bg-primaryYellow cursor-pointer hover:opacity-90 disabled:bg-gray-500 text-white "
           style={{ width: 384 }}
         >
           <ButtonRoot.ButtonContent> Entrar </ButtonRoot.ButtonContent>
