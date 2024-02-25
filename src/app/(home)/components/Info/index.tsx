@@ -1,6 +1,7 @@
 'use client'
 import { Logo } from '@app/components'
 import { motion } from 'framer-motion'
+import { animations } from '@app/shared'
 
 export const Info = () => {
   return (
@@ -8,9 +9,7 @@ export const Info = () => {
       <Logo />
       <motion.div
         className="flex flex-col items-center"
-        animate={{ opacity: 1 }}
-        transition={{ duration: 4 }}
-        initial={{ opacity: 0.1 }}
+        {...animations.showOpacity}
       >
         <h2 className="my-2 text-white text-2xl font-bold italic">
           <span className="text-primaryYellow font-semibold">Gerencie</span>{' '}
