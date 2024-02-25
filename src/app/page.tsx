@@ -1,5 +1,5 @@
-import { Home as HomeComponent } from './(home)/page'
+import { SignIn } from './(signin)/page'
 
 export default function Home() {
-  return <HomeComponent />
+  return <SignIn />
 }
