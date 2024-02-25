@@ -10,11 +10,10 @@ class SignInService {
   async authenticated({
     email,
     password,
-  }: AuthenticationParams): Promise<string | null> {
-    if (email === 'lucas@mail.com' && password === 'admin') {
-      return await v4()
-    }
-    return null
+  }: AuthenticationParams): Promise<string> {
+    if (email !== 'lucas@mail.com' && password !== 'admin')
+      throw new Error('Invalid Request')
+    return await v4()
   }
 }
 

@@ -9,10 +9,13 @@ import { InputRoot, ButtonRoot } from '@app/components'
 import { animations } from '@app/shared'
 import { useState } from 'react'
 import { SubmitHandler, useForm } from 'react-hook-form'
+import { toast } from 'react-toastify'
 import { motion } from 'framer-motion'
 import { yupResolver } from '@hookform/resolvers/yup'
+import { useRouter } from 'next/navigation'
 
 export function Form() {
+  const router = useRouter()
   const [loading, setLoading] = useState(false)
   const {
     formState: { isValid, errors },
@@ -29,9 +32,10 @@ export function Form() {
     setLoading(true)
     try {
       const response = await signInService.authenticated(data)
-      console.log(response)
+      toast.success('Usuário Authenticado')
+      router.push('/home')
     } catch (error) {
-      console.log(error)
+      toast.error('Erro na Autenticação')
     } finally {
       setLoading(false)
     }
