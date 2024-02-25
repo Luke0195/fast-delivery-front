@@ -21,3 +21,9 @@ export const animations = {
   moveRight,
   showOpacity,
 }
+
+export const moveTop = {
+  initial: { y: 90, opacity: 0.1 },
+  animate: { y: 0, opacity: 1 },
+  transition: { duration: 2 },
+}

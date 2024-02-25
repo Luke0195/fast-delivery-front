@@ -32,6 +32,7 @@ export function Form() {
         transition={{ duration: 2 }}
       >
         <ButtonRoot.Button
+          type="button"
           className="mt-4 bg-primaryYellow text-black cursor-pointer hover:opacity-90  "
           style={{ width: 384 }}
         >
