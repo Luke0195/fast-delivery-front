@@ -1,5 +1,5 @@
-import Image from "next/image";
+import { Home as HomeComponent } from './(home)/page'
 
 export default function Home() {
-  return <h1> Fast Feet</h1>;
+  return <HomeComponent />
 }
