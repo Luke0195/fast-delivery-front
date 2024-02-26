@@ -1,10 +1,16 @@
 import type { Metadata } from 'next'
+import Head from 'next/head'
 import { ToastContainer } from '@app/libs'
 import { Roboto_Condensed } from 'next/font/google'
+
 import './globals.css'
 import 'react-toastify/dist/ReactToastify.css'
 
-const robotoCondensed = Roboto_Condensed({ subsets: ['latin'] })
+const robotoCondensed = Roboto_Condensed({
+  subsets: ['latin'],
+  display: 'swap',
+  adjustFontFallback: false,
+})
 
 export const metadata: Metadata = {
   title: 'Fast Feet',

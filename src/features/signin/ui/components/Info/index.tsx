@@ -12,7 +12,7 @@ export const Info = () => {
         className="flex flex-col items-center"
         {...animations.showOpacity}
       >
-        <h2 className="my-2 text-white text-2xl font-bold italic">
+        <h2 className="my-2 text-white text-2xl font-bold  italic">
           <span className="text-primaryYellow font-semibold">Gerencie</span>{' '}
           suas encomendas com o <span className="text-primaryYellow">Fast</span>
           Feet

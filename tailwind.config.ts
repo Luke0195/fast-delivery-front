@@ -18,6 +18,9 @@ const config = {
       },
     },
     extend: {
+      fontFamily: {
+        customFont: ['Roboto_Condensed'],
+      },
       colors: {
         primaryBlue: '#4C33CC',
         primaryYellow: '#FFC042',
