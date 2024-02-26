@@ -5,7 +5,7 @@ import {
   schema,
   signInService,
 } from '@app/features/signin'
-import { InputRoot, ButtonRoot, WarningFieldMessage } from '@app/components'
+import { InputRoot, ButtonRoot, FieldMessageWarning } from '@app/components'
 import { animations } from '@app/shared'
 import { useState } from 'react'
 import { SubmitHandler, useForm } from 'react-hook-form'
@@ -15,7 +15,6 @@ import { yupResolver } from '@hookform/resolvers/yup'
 import { useRouter } from 'next/navigation'
 
 import Link from 'next/link'
-import { error } from 'console'
 
 export function Form() {
   const router = useRouter()
@@ -60,7 +59,7 @@ export function Form() {
           />
         </InputRoot.InputWrapper>
         {errors.email && errors.email.message && (
-          <WarningFieldMessage message={errors.email.message} />
+          <FieldMessageWarning message={errors.email.message} />
         )}
       </motion.div>
       <motion.div {...animations.moveRight}>
@@ -74,7 +73,7 @@ export function Form() {
             register={register}
           />
           {errors.password && errors.password.message && (
-            <WarningFieldMessage message={errors.password.message} />
+            <FieldMessageWarning message={errors.password.message} />
           )}
         </InputRoot.InputWrapper>
       </motion.div>

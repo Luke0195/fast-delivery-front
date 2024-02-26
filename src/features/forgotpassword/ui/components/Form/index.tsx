@@ -1,4 +1,4 @@
-import { InputRoot, ButtonRoot } from '@app/components'
+import { InputRoot, ButtonRoot, FieldMessageWarning } from '@app/components'
 import {
   FormData,
   schema,
@@ -22,6 +22,7 @@ export function Form() {
   const onSubmit: SubmitHandler<FormData> = (data) => {
     console.log(data)
   }
+
   return (
     <form
       className="flex flex-col items-center justify-center gap-1"
@@ -35,6 +36,9 @@ export function Form() {
           placeholder="Informe o seu e-mail"
           register={register}
         />
+        {errors.email && errors.email.message && (
+          <FieldMessageWarning message={errors.email.message} />
+        )}
       </InputRoot.InputWrapper>
       <ButtonRoot.Button
         type="submit"
