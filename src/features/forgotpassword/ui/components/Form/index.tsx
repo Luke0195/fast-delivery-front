@@ -6,8 +6,11 @@ import {
 } from '@app/features/forgotpassword'
 import { SubmitHandler, useForm } from 'react-hook-form'
 import { yupResolver } from '@hookform/resolvers/yup'
+import { validators } from '@app/utils'
+import { ShowMessage } from '@app/shared/components/ShowMessage'
 
 export function Form() {
+  const { validateHookFormField } = validators
   const {
     register,
     formState: { isValid, errors },
@@ -31,14 +34,13 @@ export function Form() {
       <InputRoot.InputWrapper>
         <InputRoot.InputLabel content="E-mail" />
         <InputRoot.ControllerInput
-          error={Boolean(errors.email && errors.email.message)}
+          error={validateHookFormField(errors, 'email')}
           name="email"
           placeholder="Informe o seu e-mail"
           register={register}
         />
-        {errors.email && errors.email.message && (
-          <FieldMessageWarning message={errors.email.message} />
-        )}
+        {validateHookFormField(errors, 'email') &&
+          ShowMessage(errors.email.message)}
       </InputRoot.InputWrapper>
       <ButtonRoot.Button
         type="submit"

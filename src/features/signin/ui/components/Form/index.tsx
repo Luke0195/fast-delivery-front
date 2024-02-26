@@ -5,7 +5,8 @@ import {
   schema,
   signInService,
 } from '@app/features/signin'
-import { InputRoot, ButtonRoot, FieldMessageWarning } from '@app/components'
+import { validators } from '@app/utils'
+import { InputRoot, ButtonRoot } from '@app/components'
 import { animations } from '@app/shared'
 import { useState } from 'react'
 import { SubmitHandler, useForm } from 'react-hook-form'
@@ -13,10 +14,12 @@ import { toast } from 'react-toastify'
 import { motion } from 'framer-motion'
 import { yupResolver } from '@hookform/resolvers/yup'
 import { useRouter } from 'next/navigation'
+import { ShowMessage } from '@app/shared/components/ShowMessage'
 
 import Link from 'next/link'
 
 export function Form() {
+  const { validateHookFormField } = validators
   const router = useRouter()
   const [loading, setLoading] = useState(false)
   const {
@@ -55,12 +58,11 @@ export function Form() {
             name="email"
             placeholder="Informe o seu email"
             register={register}
-            error={Boolean(errors.email && errors.email.message)}
+            error={validateHookFormField(errors, 'email')}
           />
         </InputRoot.InputWrapper>
-        {errors.email && errors.email.message && (
-          <FieldMessageWarning message={errors.email.message} />
-        )}
+        {validateHookFormField(errors, 'email') &&
+          ShowMessage(errors.email.message)}
       </motion.div>
       <motion.div {...animations.moveRight}>
         <InputRoot.InputWrapper>
@@ -69,12 +71,11 @@ export function Form() {
             placeholder="Informe o sua senha"
             type="password"
             name="password"
-            error={Boolean(errors.password && errors.password.message)}
+            error={validateHookFormField(errors, 'password')}
             register={register}
           />
-          {errors.password && errors.password.message && (
-            <FieldMessageWarning message={errors.password.message} />
-          )}
+          {validateHookFormField(errors, 'password') &&
+            ShowMessage(errors.password.message)}
         </InputRoot.InputWrapper>
       </motion.div>
       <Link href={'/forgotpassword'}>
