@@ -1,4 +1,4 @@
-import { Ui } from '@app/features/signin'
+import { Ui } from '@app/modules/signin'
 
 export function SignIn() {
   return <Ui />

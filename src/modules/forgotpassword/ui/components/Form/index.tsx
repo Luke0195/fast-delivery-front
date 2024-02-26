@@ -2,7 +2,7 @@ import {
   FormData,
   schema,
   makeFormDefaultValues,
-} from '@app/features/forgotpassword'
+} from '@app/modules/forgotpassword'
 import { InputRoot, ButtonRoot } from '@app/components'
 import { motion, yupResolver, useForm, Link } from '@app/libs'
 import { validators } from '@app/utils'

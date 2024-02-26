@@ -1,5 +1,4 @@
 import type { Metadata } from 'next'
-import Head from 'next/head'
 import { ToastContainer } from '@app/libs'
 import { Roboto_Condensed } from 'next/font/google'
 

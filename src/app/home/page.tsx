@@ -14,7 +14,7 @@ export default function Home() {
       <SheetTrigger>
         <FiMenu size={20} color="#ccc" />{' '}
       </SheetTrigger>
-      <SheetContent>
+      <SheetContent side="left" style={{ width: 280 }}>
         <SheetHeader>
           <SheetTitle>Are you absolutely sure?</SheetTitle>
           <SheetDescription>

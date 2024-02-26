@@ -4,7 +4,7 @@ import {
   makeDefaultValues,
   schema,
   signInService,
-} from '@app/features/signin'
+} from '@app/modules/signin'
 import { InputRoot, ButtonRoot } from '@app/components'
 import { useForm, toast, motion, yupResolver, useRouter } from '@app/libs'
 import { validators } from '@app/utils'
