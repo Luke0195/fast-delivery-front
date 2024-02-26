@@ -1,4 +1,6 @@
-import { Icon, InputRoot, ButtonRoot } from '@app/components'
+'use client'
+import { Icon } from '@app/components'
+import { Form } from './components'
 import logo from '@app/assets/imgs/logo.svg'
 
 export function Ui() {
@@ -7,19 +9,14 @@ export function Ui() {
       <div className="flex-1 bg-red-400"></div>
       <div className="flex-1 flex flex-col items-center  justify-center h-screen">
         <Icon src={logo} width={120} height={30} alt="Logo do fast feet" />
-        <span className="inline-block my-2 text-white">
-          {' '}
+        <span className="inline-block my-2 text-white text-lg">
           Recuperação de senha
         </span>
-        <form className="flex flex-col items-center justify-center gap-2">
-          <span className="text-white font-bold italic text-lg"> E-mail </span>
-          <InputRoot.InputWrapper>
-            <InputRoot.Input name="e-mail" placeholder="Informe o seu e-mail" />
-          </InputRoot.InputWrapper>
-          <ButtonRoot.Button className=" mt-1 bg-primaryYellow cursor-pointer hover:opacity-90 disabled:bg-gray-500 text-white w-full">
-            <ButtonRoot.ButtonContent>Enviar</ButtonRoot.ButtonContent>
-          </ButtonRoot.Button>
-        </form>
+        <span className="text-white text-sm ">
+          {' '}
+          Por favor informe seu e-email para a realizar a recuperação de senha.
+        </span>
+        <Form />
       </div>
     </div>
   )

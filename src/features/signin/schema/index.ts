@@ -1,6 +1,6 @@
 import * as yup from 'yup'
 
-const schema = () => {
+export const schema = () => {
   return yup.object({
     email: yup
       .string()
@@ -12,4 +12,3 @@ const schema = () => {
       .required('O campo senha é obrigatório'),
   })
 }
-export { schema }
