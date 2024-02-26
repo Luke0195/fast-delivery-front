@@ -15,15 +15,15 @@ const showOpacity = {
   animate: { opacity: 1 },
   transition: { duration: 5 },
 }
+export const moveTop = {
+  initial: { y: 90, opacity: 0.1 },
+  animate: { y: 0, opacity: 1 },
+  transition: { duration: 2 },
+}
 
 export const animations = {
   moveLeft,
   moveRight,
   showOpacity,
-}
-
-export const moveTop = {
-  initial: { y: 90, opacity: 0.1 },
-  animate: { y: 0, opacity: 1 },
-  transition: { duration: 2 },
+  moveTop,
 }

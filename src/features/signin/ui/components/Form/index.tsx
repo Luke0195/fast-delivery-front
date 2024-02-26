@@ -86,11 +86,7 @@ export function Form() {
           Esqueci minha Senha
         </motion.span>
       </Link>
-      <motion.div
-        initial={{ y: 90, opacity: 0.1 }}
-        animate={{ y: 0, opacity: 1 }}
-        transition={{ duration: 2 }}
-      >
+      <motion.div {...animations.moveTop}>
         <ButtonRoot.Button
           disabled={loading || !isValid}
           className="mt-4 bg-primaryYellow cursor-pointer hover:opacity-90 disabled:bg-gray-500 text-white "

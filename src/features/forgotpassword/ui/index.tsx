@@ -19,12 +19,6 @@ export function Ui() {
           Por favor informe seu e-email para a realizar a recuperação de senha.
         </span>
         <Form />
-        <Link href="/">
-          <span className="text-white flex  items-center justify-center mt-2 gap-x-3 cursor-pointer hover: opacity-80">
-            <FiLogIn size={20} />
-            Já possui conta.
-          </span>
-        </Link>
       </div>
     </div>
   )
