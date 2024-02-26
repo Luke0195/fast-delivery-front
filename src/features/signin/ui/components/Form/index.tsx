@@ -5,16 +5,12 @@ import {
   schema,
   signInService,
 } from '@app/features/signin'
-import { validators } from '@app/utils'
 import { InputRoot, ButtonRoot } from '@app/components'
-import { animations } from '@app/shared'
+import { useForm, toast, motion, yupResolver, useRouter } from '@app/libs'
+import { validators } from '@app/utils'
+import { animations, ShowMessage } from '@app/shared'
+import { SubmitHandler } from 'react-hook-form'
 import { useState } from 'react'
-import { SubmitHandler, useForm } from 'react-hook-form'
-import { toast } from 'react-toastify'
-import { motion } from 'framer-motion'
-import { yupResolver } from '@hookform/resolvers/yup'
-import { useRouter } from 'next/navigation'
-import { ShowMessage } from '@app/shared/components/ShowMessage'
 
 import Link from 'next/link'
 
@@ -64,6 +60,7 @@ export function Form() {
         {validateHookFormField(errors, 'email') &&
           ShowMessage(errors.email.message)}
       </motion.div>
+
       <motion.div {...animations.moveRight}>
         <InputRoot.InputWrapper>
           <InputRoot.InputLabel content="Senha" />
@@ -78,6 +75,7 @@ export function Form() {
             ShowMessage(errors.password.message)}
         </InputRoot.InputWrapper>
       </motion.div>
+
       <Link href={'/forgotpassword'}>
         <motion.span
           className="block mt-2 font-normal text-base text-white hover:underline cursor-pointer"
@@ -86,6 +84,7 @@ export function Form() {
           Esqueci minha Senha
         </motion.span>
       </Link>
+
       <motion.div {...animations.moveTop}>
         <ButtonRoot.Button
           disabled={loading || !isValid}

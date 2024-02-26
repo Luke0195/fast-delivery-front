@@ -1,7 +1,7 @@
 'use client'
 import { Icon } from '@app/components'
-import { motion } from 'framer-motion'
 import { animations } from '@app/shared'
+import { motion } from '@app/libs'
 import logo from '@app/assets/imgs/logo.svg'
 
 export const Info = () => {

@@ -1,17 +1,14 @@
-import { InputRoot, ButtonRoot } from '@app/components'
 import {
   FormData,
   schema,
   makeFormDefaultValues,
 } from '@app/features/forgotpassword'
-import { SubmitHandler, useForm } from 'react-hook-form'
-import { yupResolver } from '@hookform/resolvers/yup'
+import { InputRoot, ButtonRoot } from '@app/components'
+import { motion, yupResolver, useForm, Link } from '@app/libs'
 import { validators } from '@app/utils'
-import { ShowMessage } from '@app/shared/components/ShowMessage'
-import { motion } from 'framer-motion'
-import { animations } from '@app/shared'
+import { animations, ShowMessage } from '@app/shared'
+import { SubmitHandler } from 'react-hook-form'
 import { FiLogIn } from 'react-icons/fi'
-import Link from 'next/link'
 
 export function Form() {
   const { validateHookFormField } = validators
@@ -48,6 +45,7 @@ export function Form() {
             ShowMessage(errors.email.message)}
         </InputRoot.InputWrapper>
       </motion.div>
+
       <motion.div {...animations.showOpacity} className="w-full">
         <ButtonRoot.Button
           type="submit"
@@ -57,6 +55,7 @@ export function Form() {
           <ButtonRoot.ButtonContent>Enviar</ButtonRoot.ButtonContent>
         </ButtonRoot.Button>
       </motion.div>
+
       <motion.div {...animations.moveTop}>
         <Link href="/">
           <span className="text-white flex  items-center justify-center mt-2 gap-x-3 cursor-pointer hover: opacity-80">
