@@ -13,6 +13,7 @@ import { toast } from 'react-toastify'
 import { motion } from 'framer-motion'
 import { yupResolver } from '@hookform/resolvers/yup'
 import { useRouter } from 'next/navigation'
+import Link from 'next/link'
 
 export function Form() {
   const router = useRouter()
@@ -69,14 +70,14 @@ export function Form() {
           />
         </InputRoot.InputWrapper>
       </motion.div>
-
-      <motion.span
-        className="block mt-2 font-normal text-base text-white hover:underline cursor-pointer"
-        {...animations.showOpacity}
-      >
-        {' '}
-        Esqueci minha Senha
-      </motion.span>
+      <Link href={'/forgotpassword'}>
+        <motion.span
+          className="block mt-2 font-normal text-base text-white hover:underline cursor-pointer"
+          {...animations.showOpacity}
+        >
+          Esqueci minha Senha
+        </motion.span>
+      </Link>
       <motion.div
         initial={{ y: 90, opacity: 0.1 }}
         animate={{ y: 0, opacity: 1 }}

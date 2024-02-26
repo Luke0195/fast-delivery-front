@@ -1,12 +1,12 @@
 'use client'
-import { Logo } from '@app/components'
+import { Icon } from '@app/components'
 import { motion } from 'framer-motion'
 import { animations } from '@app/shared'
-
+import logo from '@app/assets/imgs/logo.svg'
 export const Info = () => {
   return (
     <>
-      <Logo />
+      <Icon width={120} height={40} alt="logo do fast-feet" src={logo} />
       <motion.div
         className="flex flex-col items-center"
         {...animations.showOpacity}

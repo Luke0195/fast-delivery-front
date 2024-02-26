@@ -1,5 +1,4 @@
-import { Form } from './Form'
-import { Info } from './Info'
+import { Info, Form } from './components'
 
 export function Ui() {
   return (
