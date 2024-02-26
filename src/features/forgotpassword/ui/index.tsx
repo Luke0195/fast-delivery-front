@@ -2,6 +2,8 @@
 import { Icon } from '@app/components'
 import { Form } from './components'
 import logo from '@app/assets/imgs/logo.svg'
+import { FiLogIn } from 'react-icons/fi'
+import Link from 'next/link'
 
 export function Ui() {
   return (
@@ -17,6 +19,12 @@ export function Ui() {
           Por favor informe seu e-email para a realizar a recuperação de senha.
         </span>
         <Form />
+        <Link href="/">
+          <span className="text-white flex  items-center justify-center mt-2 gap-x-3 cursor-pointer hover: opacity-80">
+            <FiLogIn size={20} />
+            Já possui conta.
+          </span>
+        </Link>
       </div>
     </div>
   )
