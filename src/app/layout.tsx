@@ -24,7 +24,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={robotoCondensed.className}>
-        {children}{' '}
+        {children}
         <ToastContainer
           position="top-right"
           autoClose={5000}

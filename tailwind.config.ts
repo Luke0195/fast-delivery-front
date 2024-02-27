@@ -22,6 +22,7 @@ const config = {
         customFont: ['Roboto_Condensed'],
       },
       colors: {
+        primaryGray: '#404040',
         primaryBlue: '#4C33CC',
         primaryYellow: '#FFC042',
         border: 'hsl(var(--border))',
