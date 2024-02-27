@@ -1,5 +1,9 @@
-import { Layout } from '@app/components/Layout'
+import Layout from '@app/components/Layout'
 
-export default function Home() {
-  return <Layout />
+export default function MyApp({ Component, pageProps }) {
+  return (
+    <Layout>
+      <Component {...pageProps} />
+    </Layout>
+  )
 }

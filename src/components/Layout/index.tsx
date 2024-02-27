@@ -1,14 +1,15 @@
 'use client'
-import { SideBar } from '../Sidebar'
-import { sideBarItems } from '../Sidebar/sidebar-items'
-import { useState } from 'react'
+import { Header } from '../index'
+import React from 'react'
 
-export function Layout() {
-  const [activeItem, setActiveItem] = useState(0)
-
+type LayoutProps = {
+  children: React.ReactNode
+}
+export default function Layout({ children }: LayoutProps) {
   return (
-    <div className="w-screen h-screen  relative">
-      <SideBar sideBarItems={sideBarItems} />
+    <div className="w-screen h-screen  relative bg-slate-400">
+      <Header />
+      <main>{children}</main>
     </div>
   )
 }

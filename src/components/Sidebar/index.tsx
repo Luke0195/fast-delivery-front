@@ -7,7 +7,7 @@ import { ComponentProps } from './sidebar-items'
 export function SideBar(props: ComponentProps) {
   const { sideBarItems } = props
   return (
-    <div className="absolute top-5  left-5">
+    <div className="">
       <Sheet>
         <SheetTrigger>
           {' '}
