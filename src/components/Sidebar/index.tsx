@@ -7,13 +7,17 @@ import { ComponentProps } from './sidebar-items'
 export function SideBar(props: ComponentProps) {
   const { sideBarItems } = props
   return (
-    <div className="">
+    <div className=" bg-gray-500">
       <Sheet>
         <SheetTrigger>
           {' '}
           <FiMenu size={20} className="text-primaryGray" />
         </SheetTrigger>
-        <SheetContent side="left" style={{ width: 280 }} className="pt-4 px-0">
+        <SheetContent
+          side="left"
+          style={{ width: 280 }}
+          className="pt-4 px-0  bg-gray-400"
+        >
           {sideBarItems.map((item) => (
             <div
               className="w-full flex items-center gap-x-3 p-4 hover:bg-primaryYellow cursor-pointer"

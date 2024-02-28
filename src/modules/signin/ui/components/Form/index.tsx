@@ -32,7 +32,7 @@ export function Form() {
   const onSubmit: SubmitHandler<AuthenticationParams> = async (data) => {
     setLoading(true)
     try {
-      const response = await signInService.authenticated(data)
+      const response = await signInService.authenticate(data)
       toast.success('Usuário Authenticado')
       router.push('/home')
     } catch (error) {

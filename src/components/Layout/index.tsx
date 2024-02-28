@@ -2,14 +2,10 @@
 import { Header } from '../index'
 import React from 'react'
 
-type LayoutProps = {
-  children: React.ReactNode
-}
-export default function Layout({ children }: LayoutProps) {
+export default function Layout() {
   return (
-    <div className="w-screen h-screen  relative bg-slate-400">
+    <div className="w-screen h-screen  relative bg-gray-500">
       <Header />
-      <main>{children}</main>
     </div>
   )
 }

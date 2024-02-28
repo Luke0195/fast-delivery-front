@@ -22,6 +22,7 @@ export const sideBarItems: SideBarProps[] = [
     label: 'Encomendas',
     pathName: '/orders',
   },
+
   {
     icon: <MdDeliveryDining size={20} className="text-primaryGray" />,
     label: 'Encomendas',
@@ -33,11 +34,13 @@ export const sideBarItems: SideBarProps[] = [
     label: 'Destinatários',
     pathName: '/recipents',
   },
+
   {
     icon: <MdOutlineReportProblem size={20} className="text-primaryGray" />,
     label: 'Problemas',
     pathName: '/recipents',
   },
+
   {
     icon: <IoIosNotificationsOutline size={20} className="text-primaryGray" />,
     label: 'Notificações',

@@ -8,7 +8,7 @@ export function Header() {
   return (
     <header className="w-full h-16  border-b flex items-center relative px-9 gap-5  justify-between">
       <SideBar sideBarItems={sideBarItems} />
-      <div className="flex items-center ">
+      <div className="flex items-center justify-between w-full ">
         <Image src={logo} width={180} height={40} alt="Logo Fast Feet" />
         <FiPower />
       </div>

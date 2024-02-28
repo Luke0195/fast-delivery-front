@@ -1,13 +1,13 @@
-import { AuthenticationParams } from '../interfaces'
+import { AuthenticationParams } from '..'
+import { Authenticate } from '../usecases'
 import { v4 } from 'uuid'
 
-class SignInService {
+class SignInService implements Authenticate {
   private readonly baseUrl: string
   constructor() {
     this.baseUrl = 'http://localhost:8080'
   }
-
-  async authenticated({
+  async authenticate({
     email,
     password,
   }: AuthenticationParams): Promise<string> {
