@@ -34,7 +34,7 @@ export function Form() {
     try {
       const response = await signInService.authenticate(data)
       toast.success('Usuário Authenticado')
-      router.push('/home')
+      router.push('/main')
     } catch (error) {
       toast.error('Erro na Autenticação')
     } finally {

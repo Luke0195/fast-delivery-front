@@ -1,5 +1,6 @@
 'use client'
 import React from 'react'
+import { FiHome } from 'react-icons/fi'
 import { CgNotes } from 'react-icons/cg'
 import { MdDeliveryDining } from 'react-icons/md'
 import { LuUser } from 'react-icons/lu'
@@ -18,9 +19,14 @@ export type ComponentProps = {
 
 export const sideBarItems: SideBarProps[] = [
   {
+    icon: <FiHome size={20} className="text-primaryGray" />,
+    label: 'Home',
+    pathName: '/main',
+  },
+  {
     icon: <CgNotes size={20} className="text-primaryGray" />,
     label: 'Encomendas',
-    pathName: '/orders',
+    pathName: 'main/dashboard',
   },
 
   {

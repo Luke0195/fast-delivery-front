@@ -7,11 +7,11 @@ import { ComponentProps } from './sidebar-items'
 export function SideBar(props: ComponentProps) {
   const { sideBarItems } = props
   return (
-    <div className=" bg-gray-500">
+    <div className="">
       <Sheet>
         <SheetTrigger>
           {' '}
-          <FiMenu size={20} className="text-primaryGray" />
+          <FiMenu size={20} />
         </SheetTrigger>
         <SheetContent
           side="left"
