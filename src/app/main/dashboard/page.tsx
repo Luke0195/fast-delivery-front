@@ -1,3 +1,6 @@
+'use client'
+import { Ui } from '@app/modules/dashboard/ui'
+
 export default function Dashboard() {
-  return <h1> Dashboard Page</h1>
+  return <Ui />
 }

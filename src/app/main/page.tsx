@@ -1,3 +1,5 @@
-export default function Main() {
-  return <h1> Home Page 1</h1>
+'use client'
+import { Ui } from '@app/modules/dashboard/ui'
+export default function Dashboard() {
+  return <Ui />
 }

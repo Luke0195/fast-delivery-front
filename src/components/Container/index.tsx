@@ -1,3 +1,4 @@
+'use client'
 import { ComponentWithProps } from '@app/shared/interfaces'
 
 export function Container(props: ComponentWithProps) {
