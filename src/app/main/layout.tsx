@@ -1,4 +1,5 @@
 import { Header } from '@app/components'
+import { Container } from '@app/components'
 
 export default function MainLayout({
   children,
@@ -8,7 +9,7 @@ export default function MainLayout({
   return (
     <div className="w-screen h-screen  flex flex-col bg-bgPrimary">
       <Header />
-      <main>{children}</main>
+      <Container>{children}</Container>
     </div>
   )
 }

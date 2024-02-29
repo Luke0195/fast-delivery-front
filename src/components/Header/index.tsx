@@ -1,4 +1,3 @@
-import { Image } from '@app/libs/next'
 import logo from '@app/assets/imgs/ff-logo.svg'
 import { SideBar } from '@app/components'
 import { sideBarItems } from '@app/components/Sidebar/sidebar-items'

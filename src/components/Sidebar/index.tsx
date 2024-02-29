@@ -11,7 +11,7 @@ export function SideBar(props: ComponentProps) {
       <Sheet>
         <SheetTrigger>
           {' '}
-          <FiMenu size={23} />
+          <FiMenu size={23} className="mt-2" />
         </SheetTrigger>
         <SheetContent side="left" style={{ width: 280 }} className="p-0 m-0">
           {sideBarItems.map((item) => (
