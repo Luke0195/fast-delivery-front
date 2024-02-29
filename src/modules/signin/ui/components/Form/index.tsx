@@ -8,7 +8,7 @@ import {
 import { InputRoot, ButtonRoot } from '@app/components'
 import { useForm, toast, motion, yupResolver, useRouter } from '@app/libs'
 import { validators } from '@app/utils'
-import { animations, ShowMessage } from '@app/shared'
+import { animations, AnimationWrapper, ShowMessage } from '@app/shared'
 import { SubmitHandler } from 'react-hook-form'
 import { useState } from 'react'
 
@@ -47,7 +47,7 @@ export function Form() {
       className="flex flex-col items-center"
       onSubmit={handleSubmit(onSubmit)}
     >
-      <motion.div {...animations.moveLeft}>
+      <AnimationWrapper animation={animations.moveLeft}>
         <InputRoot.InputWrapper>
           <InputRoot.InputLabel content="E-mail" />
           <InputRoot.ControllerInput
@@ -59,9 +59,9 @@ export function Form() {
         </InputRoot.InputWrapper>
         {validateHookFormField(errors, 'email') &&
           ShowMessage(errors.email.message)}
-      </motion.div>
+      </AnimationWrapper>
 
-      <motion.div {...animations.moveRight}>
+      <AnimationWrapper animation={animations.moveRight}>
         <InputRoot.InputWrapper>
           <InputRoot.InputLabel content="Senha" />
           <InputRoot.ControllerInput
@@ -74,7 +74,7 @@ export function Form() {
           {validateHookFormField(errors, 'password') &&
             ShowMessage(errors.password.message)}
         </InputRoot.InputWrapper>
-      </motion.div>
+      </AnimationWrapper>
 
       <Link href={'/forgotpassword'}>
         <motion.span
@@ -85,7 +85,7 @@ export function Form() {
         </motion.span>
       </Link>
 
-      <motion.div {...animations.moveTop}>
+      <AnimationWrapper animation={animations.moveTop}>
         <ButtonRoot.Button
           disabled={loading || !isValid}
           className="mt-4 bg-primaryYellow cursor-pointer hover:opacity-90 disabled:bg-gray-500 text-white "
@@ -93,7 +93,7 @@ export function Form() {
         >
           <ButtonRoot.ButtonContent> Entrar </ButtonRoot.ButtonContent>
         </ButtonRoot.Button>
-      </motion.div>
+      </AnimationWrapper>
     </form>
   )
 }
