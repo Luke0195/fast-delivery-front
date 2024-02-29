@@ -1,10 +1,9 @@
 'use client'
-import dynamic from 'next/dynamic'
 import React from 'react'
 import { PageHeader } from '@app/components'
 import { Card, CardContent, CardTitle } from '@app/_widgets/ui/card'
 import ApexChart, { Props } from 'react-apexcharts'
-
+import { AnimationWrapper, animations } from '@app/shared'
 const pieChart: Props = {
   series: [44, 55, 41, 17],
 
@@ -116,48 +115,54 @@ export function Ui() {
         description="Utilize os recursos para visualizar o desempenho da transportadoras"
       />
       <div className="w-full my-3 grid grid-cols-3 gap-11">
-        <Card className="p-4 gap-y-2 border border-gray-300">
-          <CardTitle className="font-semibold text-xl text-gray-600 my-2">
-            Resultado das Encomendas
-          </CardTitle>
-          <CardContent>
-            <ApexChart
-              width={400}
-              height={250}
-              options={pieChart.options}
-              series={pieChart.series}
-              type="donut"
-            />
-          </CardContent>
-        </Card>
-        <Card className="p-4 gap-y-2 border border-gray-300">
-          <CardTitle className="font-semibold text-xl text-gray-600 my-2">
-            Problemas Relatados
-          </CardTitle>
-          <CardContent>
-            <ApexChart
-              width={500}
-              height={250}
-              options={areaChart.options}
-              series={areaChart.series}
-              type="area"
-            />
-          </CardContent>
-        </Card>
-        <Card className="p-4 gap-y-2 border border-gray-300">
-          <CardTitle className="font-semibold text-xl text-gray-600 my-2">
-            Destinatários por Região.
-          </CardTitle>
-          <CardContent>
-            <ApexChart
-              width={500}
-              height={250}
-              options={barChart.options}
-              series={barChart.series}
-              type="bar"
-            />
-          </CardContent>
-        </Card>
+        <AnimationWrapper animation={animations.moveRight}>
+          <Card className="p-4 gap-y-2 border border-gray-300">
+            <CardTitle className="font-semibold text-xl text-gray-600 my-2">
+              Resultado das Encomendas
+            </CardTitle>
+            <CardContent>
+              <ApexChart
+                width={400}
+                height={250}
+                options={pieChart.options}
+                series={pieChart.series}
+                type="donut"
+              />
+            </CardContent>
+          </Card>
+        </AnimationWrapper>
+        <AnimationWrapper animation={animations.moveTop}>
+          <Card className="p-4 gap-y-2 border border-gray-300">
+            <CardTitle className="font-semibold text-xl text-gray-600 my-2">
+              Problemas Relatados
+            </CardTitle>
+            <CardContent>
+              <ApexChart
+                width={500}
+                height={240}
+                options={areaChart.options}
+                series={areaChart.series}
+                type="area"
+              />
+            </CardContent>
+          </Card>
+        </AnimationWrapper>
+        <AnimationWrapper animation={animations.moveLeft}>
+          <Card className="p-4 gap-y-2 border border-gray-300">
+            <CardTitle className="font-semibold text-xl text-gray-600 my-2">
+              Destinatários por Região.
+            </CardTitle>
+            <CardContent>
+              <ApexChart
+                width={500}
+                height={240}
+                options={barChart.options}
+                series={barChart.series}
+                type="bar"
+              />
+            </CardContent>
+          </Card>
+        </AnimationWrapper>
       </div>
     </div>
   )
