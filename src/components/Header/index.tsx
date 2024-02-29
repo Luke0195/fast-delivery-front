@@ -9,7 +9,9 @@ export function Header() {
     <header className="w-full h-16  border-b flex items-center relative px-9 gap-5  justify-between border-b-gray-300">
       <SideBar sideBarItems={sideBarItems} />
       <div className="flex items-center justify-between w-full ">
-        <Image src={logo} width={180} height={40} alt="Logo Fast Feet" />
+        <h3 className="font-bold italic text-2xl text-primaryYellow">
+          Fast<span>Feet</span>
+        </h3>
         <FiPower />
       </div>
     </header>
