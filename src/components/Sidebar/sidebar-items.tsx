@@ -32,7 +32,7 @@ export const sideBarItems: SideBarProps[] = [
   {
     icon: <MdDeliveryDining size={20} className="text-primaryGray" />,
     label: 'Encomendas',
-    pathName: '/recipents',
+    pathName: '/main/recipents',
   },
 
   {
