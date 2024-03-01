@@ -10,7 +10,7 @@
     "prepare": "husky",
     "test": "jest --passWithNoTests",
     "cypress:open": "cypress open",
-    "teste2e": "npx cypress run"
+    "teste2e": " cypress run"
   },
   "dependencies": {
     "@emotion/react": "^11.11.4",
