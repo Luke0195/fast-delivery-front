@@ -1,5 +1,6 @@
 'use client'
 import * as React from 'react'
+import { useRouter } from 'next/navigation'
 import { HiDotsVertical } from 'react-icons/hi'
 import {
   ColumnDef,
@@ -166,6 +167,7 @@ export const columns: ColumnDef<Payment>[] = [
 ]
 
 export function Ui() {
+  const router = useRouter()
   const [sorting, setSorting] = React.useState<SortingState>([])
   const [columnFilters, setColumnFilters] = React.useState<ColumnFiltersState>(
     [],
@@ -224,7 +226,13 @@ export function Ui() {
             />
           </div>
           <div className="flex items-center gap-x-6">
-            <Button className="bg-primaryYellow"> Criar Destinatário</Button>
+            <Button
+              className="bg-primaryYellow"
+              onClick={() => router.push('/main/recipents/register')}
+            >
+              {' '}
+              Criar Destinatário
+            </Button>
             <DropdownMenu>
               <DropdownMenuTrigger asChild>
                 <Button variant="outline" className="ml-auto">
