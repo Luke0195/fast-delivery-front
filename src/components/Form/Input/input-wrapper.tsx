@@ -1,10 +1,9 @@
 type Props = {
   children: React.ReactNode
+  className?: string
 }
 export function InputWrapper(props: Props) {
-  return (
-    <div className="w-96 my-1 flex flex-col items-center justify-center">
-      {props.children}
-    </div>
-  )
+  const { className } = props
+  const styles = className !== null ? className : 'my-2 text-base text-white'
+  return <div className={styles}>{props.children}</div>
 }
