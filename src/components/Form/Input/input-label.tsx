@@ -5,6 +5,7 @@ interface Props
     HTMLLabelElement
   > {
   content: string
+  className?: string
 }
 export function InputLabel(props: Props) {
   const { content, className } = props

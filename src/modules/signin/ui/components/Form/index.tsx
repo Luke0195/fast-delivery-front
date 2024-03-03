@@ -49,7 +49,7 @@ export function Form() {
     >
       <AnimationWrapper animation={animations.moveLeft}>
         <InputRoot.InputWrapper className={null}>
-          <InputRoot.InputLabel content="E-mail" />
+          <InputRoot.InputLabel content="E-mail" className={null} />
           <InputRoot.ControllerInput
             name="email"
             placeholder="Informe o seu email"
@@ -63,7 +63,7 @@ export function Form() {
 
       <AnimationWrapper animation={animations.moveRight}>
         <InputRoot.InputWrapper className={null}>
-          <InputRoot.InputLabel content="Senha" />
+          <InputRoot.InputLabel content="Senha" className={null} />
           <InputRoot.ControllerInput
             placeholder="Informe o sua senha"
             type="password"
