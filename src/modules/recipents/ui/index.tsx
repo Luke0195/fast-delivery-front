@@ -1,5 +1,5 @@
 'use client'
-import { PageHeader } from '@app/components'
+import { PageHeader, Manager } from '@app/components'
 import { GridColDef, DataGrid } from '@mui/x-data-grid'
 
 const columns: GridColDef[] = [
@@ -57,18 +57,11 @@ export function Ui() {
         description="Utilize os recursos para gerenciar as encomendas da sua transportadora."
       />
       <div style={{ height: 400, width: '100%' }} className="my-4 px-4">
-        <DataGrid
-          rows={rows}
+        <Manager
           columns={columns}
-          initialState={{
-            sorting: {},
-            pagination: {
-              paginationModel: { page: 0, pageSize: 5 },
-            },
-          }}
+          rows={rows}
+          hasChecked={true}
           loading={false}
-          pageSizeOptions={[5, 10]}
-          checkboxSelection
         />
       </div>
     </>
