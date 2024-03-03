@@ -12,7 +12,7 @@ export function ControllerInput(props: ControllerInputProps) {
     <ShadInput
       {...register(`${name}`)}
       {...rest}
-      className={`${error ? 'border-red-500' : 'border-white'}`}
+      className={`${error ? 'border-red-500' : 'border-white'} w-full border-gray-500`}
     />
   )
 }

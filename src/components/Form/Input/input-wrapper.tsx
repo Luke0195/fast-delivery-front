@@ -4,6 +4,16 @@ type Props = {
 }
 export function InputWrapper(props: Props) {
   const { className } = props
-  const styles = className !== null ? className : 'my-2 text-base text-white'
-  return <div className={styles}>{props.children}</div>
+
+  return (
+    <div
+      className={
+        className !== null
+          ? className
+          : 'w-96 my-1 flex flex-col items-center justify-center'
+      }
+    >
+      {props.children}
+    </div>
+  )
 }

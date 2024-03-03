@@ -26,7 +26,7 @@ export const sideBarItems: SideBarProps[] = [
   {
     icon: <CgNotes size={20} className="text-primaryGray" />,
     label: 'Encomendas',
-    pathName: 'main/dashboard',
+    pathName: '/main/recipents',
   },
 
   {
@@ -38,7 +38,7 @@ export const sideBarItems: SideBarProps[] = [
   {
     icon: <LuUser size={20} className="text-primaryGray" />,
     label: 'Destinatários',
-    pathName: '/recipents',
+    pathName: '/main/recipents',
   },
 
   {

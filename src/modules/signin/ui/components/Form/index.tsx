@@ -48,7 +48,7 @@ export function Form() {
       onSubmit={handleSubmit(onSubmit)}
     >
       <AnimationWrapper animation={animations.moveLeft}>
-        <InputRoot.InputWrapper>
+        <InputRoot.InputWrapper className={null}>
           <InputRoot.InputLabel content="E-mail" />
           <InputRoot.ControllerInput
             name="email"
@@ -62,7 +62,7 @@ export function Form() {
       </AnimationWrapper>
 
       <AnimationWrapper animation={animations.moveRight}>
-        <InputRoot.InputWrapper>
+        <InputRoot.InputWrapper className={null}>
           <InputRoot.InputLabel content="Senha" />
           <InputRoot.ControllerInput
             placeholder="Informe o sua senha"
