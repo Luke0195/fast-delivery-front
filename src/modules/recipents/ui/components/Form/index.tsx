@@ -73,7 +73,7 @@ export function Ui() {
                 <InputRoot.InputWrapper>
                   <InputRoot.InputLabel content="Rua" />
                   <InputRoot.ControllerInput
-                    placeholder="Informe o nome"
+                    placeholder="Informe o seu endereço"
                     className="border border-gray-400"
                     register={register}
                     name="address.name"
@@ -103,7 +103,7 @@ export function Ui() {
                 <InputRoot.InputWrapper>
                   <InputRoot.InputLabel content="Bairro" />
                   <InputRoot.ControllerInput
-                    placeholder="Informe o nome"
+                    placeholder="Informe o bairro"
                     className="border border-gray-400"
                     name="address.sub_locallity"
                     register={register}
@@ -131,7 +131,7 @@ export function Ui() {
                 <InputRoot.InputWrapper>
                   <InputRoot.InputLabel content="Numero" />
                   <InputRoot.ControllerInput
-                    placeholder="Informe o numero"
+                    placeholder="Informe o complemento"
                     className="border border-gray-400"
                     name="address.number"
                     register={register}
@@ -157,7 +157,7 @@ export function Ui() {
                 <InputRoot.InputWrapper>
                   <InputRoot.InputLabel content="Complemento" />
                   <InputRoot.ControllerInput
-                    placeholder="Informe o nome"
+                    placeholder="Informe sua cidade"
                     className="border border-gray-400"
                     name="address.complement"
                     register={register}
@@ -187,7 +187,7 @@ export function Ui() {
                 <InputRoot.InputWrapper>
                   <InputRoot.InputLabel content="Cidade" />
                   <InputRoot.ControllerInput
-                    placeholder="Informe o nome"
+                    placeholder="Informe o cidade"
                     className="border border-gray-400"
                     name="address.city"
                     register={register}
@@ -216,7 +216,7 @@ export function Ui() {
                 <InputRoot.InputWrapper>
                   <InputRoot.InputLabel content="Estado" />
                   <InputRoot.ControllerInput
-                    placeholder="Informe o nome"
+                    placeholder="Informe o estado"
                     className="border border-gray-400 w-full"
                     name="address.state"
                     register={register}
@@ -245,7 +245,7 @@ export function Ui() {
                 <InputRoot.InputWrapper>
                   <InputRoot.InputLabel content="CEP" />
                   <InputRoot.ControllerInput
-                    placeholder="Informe o nome"
+                    placeholder="Informe o cep"
                     className="border border-gray-400"
                     name="address.code"
                     register={register}
