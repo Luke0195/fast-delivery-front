@@ -51,7 +51,7 @@ export function Area(props: ComponentProps) {
   const { series, options } = props
   return (
     <ReactApexChart
-      width={500}
+      width={400}
       height={220}
       type="area"
       options={defaultArea.options}

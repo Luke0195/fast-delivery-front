@@ -1,5 +1,5 @@
-import { AuthenticationParams } from '..'
+import { AuthenticationParams, Account } from '..'
 
 export interface Authenticate {
-  authenticate(params: AuthenticationParams): Promise<string>
+  authenticate(params: AuthenticationParams): Promise<Account>
 }

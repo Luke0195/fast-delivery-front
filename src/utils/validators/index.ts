@@ -1,8 +1,16 @@
 class Validator {
   constructor() {}
 
-  validateHookFormField<T>(errors: T, fieldName: string): boolean {
-    return errors[fieldName] && errors[fieldName].message
+  validateHookFormField<T>(
+    errors: T,
+    fieldName: string,
+    objectValue: any = '',
+  ): boolean {
+    if (objectValue === '')
+      return errors[fieldName] && errors[fieldName].message
+    return (
+      errors[objectValue][fieldName] && errors[objectValue][fieldName].messsage
+    )
   }
 }
 

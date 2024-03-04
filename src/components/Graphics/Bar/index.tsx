@@ -46,7 +46,7 @@ const barChart: Props = {
 export function Bar() {
   return (
     <ReactApexChart
-      width={500}
+      width={400}
       height={220}
       type="bar"
       options={barChart.options}

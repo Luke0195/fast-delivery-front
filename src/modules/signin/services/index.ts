@@ -1,4 +1,5 @@
 import { AuthenticationParams } from '..'
+import { AccountModel } from '@app/models/account'
 import { Authenticate } from '../usecases'
 import { v4 } from 'uuid'
 
@@ -10,10 +11,13 @@ class SignInService implements Authenticate {
   async authenticate({
     email,
     password,
-  }: AuthenticationParams): Promise<string> {
+  }: AuthenticationParams): Promise<AccountModel> {
     if (email !== 'lucas@mail.com' && password !== 'admin')
       throw new Error('Invalid Request')
-    return await v4()
+    const token = await v4()
+    return {
+      access_token: token,
+    }
   }
 }
 

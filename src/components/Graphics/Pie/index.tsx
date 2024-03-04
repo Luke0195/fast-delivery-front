@@ -34,7 +34,7 @@ export function Pie(props: ComponentProps) {
   const { series, options } = props
   return (
     <ReactApexChart
-      width={500}
+      width={400}
       height={230}
       type="pie"
       options={pieChart.options}

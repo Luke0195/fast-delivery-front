@@ -1,6 +1,7 @@
 'use client'
-import { PageHeader, Manager } from '@app/components'
-import { GridColDef, DataGrid } from '@mui/x-data-grid'
+import { PageHeader, Manager, ButtonRoot } from '@app/components'
+import { GridColDef } from '@mui/x-data-grid'
+import Link from 'next/link'
 
 const columns: GridColDef[] = [
   {
@@ -56,7 +57,20 @@ export function Ui() {
         title="Encomendas"
         description="Utilize os recursos para gerenciar as encomendas da sua transportadora."
       />
-      <div style={{ height: 400, width: '100%' }} className="my-4 px-4">
+      <div
+        style={{ height: 400, width: '100%' }}
+        className="my-4 px-4 flex flex-col "
+      >
+        <div className="flex justify-end">
+          <Link href={'/main/recipents/register'}>
+            <ButtonRoot.Button className="my-2 bg-primaryYellow">
+              {' '}
+              <ButtonRoot.ButtonContent>
+                Criar Destinatário
+              </ButtonRoot.ButtonContent>
+            </ButtonRoot.Button>
+          </Link>
+        </div>
         <Manager
           columns={columns}
           rows={rows}

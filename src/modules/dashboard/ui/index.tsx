@@ -15,7 +15,7 @@ export function Ui() {
         title="Dashboard"
         description="Utilize os recursos para visualizar o desempenho da transportadoras"
       />
-      <div className="w-scren my-3 grid grid-cols-3 gap-9">
+      <div className="w-scren my-3 grid  gap-9 w:grid grid-cols-1 lg:grid-cols-3">
         <Recipent />
         <Report />
         <DestinyRegion />
