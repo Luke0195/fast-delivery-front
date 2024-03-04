@@ -8,7 +8,7 @@ class RecipentService {
     const response = await httpClient.request({
       method: 'POST',
       url: 'recipents',
-      body: data,
+      body: JSON.stringify(data),
     })
     console.log(response)
     return response.body

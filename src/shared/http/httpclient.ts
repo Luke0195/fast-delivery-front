@@ -11,10 +11,14 @@ class HttpFetchClient implements HttpClient {
     body,
     headers,
   }: HttpRequestData): Promise<HttResponseData<any>> {
+    console.log(body)
     const response = await fetch(`${this.baseUrl}/${url}`, {
       body: body,
       method: method,
-      headers: headers,
+      headers: {
+        'Content-Type': 'application/json',
+        Accept: 'application/json',
+      },
     })
     return response.json()
   }

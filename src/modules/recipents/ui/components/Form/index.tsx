@@ -3,15 +3,18 @@ import {
   RecipentFormData,
   makeDefaultsValuesToFormData,
   schema,
+  recipentService,
 } from '@app/modules/recipents'
 import { Table, TableRow, TableBody, TableCell, Button } from '@app/_widgets/ui'
+import { toast } from 'react-toastify'
 import validators from '@app/utils/validators'
-import { makeToast } from '@app/shared'
+import { useRouter } from 'next/navigation'
 import { Container, PageHeader, InputRoot } from '@app/components'
 import { useForm, yupResolver } from '@app/libs'
 import { useState } from 'react'
 
 export function Ui() {
+  const router = useRouter()
   const [loading, setLoading] = useState<boolean>(false)
   const { validateHookFormField } = validators
   const {
@@ -29,16 +32,12 @@ export function Ui() {
   const onSubmit = async (data: RecipentFormData) => {
     setLoading(true)
     try {
-      console.log(data)
-      makeToast({
-        type: 'success',
-        message: 'Ação realizada com sucesso!',
-      })
+      recipentService.createRecipent(data)
+      toast.success('Ação realizada com sucesso!')
+      reset()
+      router.push('/main/recipents')
     } catch (error) {
-      makeToast({
-        type: 'error',
-        message: 'Destinatário cadastrado com sucesso!',
-      })
+      toast.error('Ocorreu um erro na operação!')
     } finally {
       setLoading(false)
     }
