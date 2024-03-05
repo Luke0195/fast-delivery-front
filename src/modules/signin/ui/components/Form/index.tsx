@@ -24,7 +24,7 @@ export function Form() {
     handleSubmit,
   } = useForm<AuthenticationParams>({
     mode: 'all',
-    reValidateMode: 'onBlur',
+    reValidateMode: 'onSubmit',
     defaultValues: makeDefaultValues(),
     resolver: yupResolver(schema()),
   })

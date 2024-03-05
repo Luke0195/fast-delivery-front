@@ -19,6 +19,7 @@ const columns: GridColDef[] = [
     align: 'center',
     headerAlign: 'center',
     filterable: false,
+    renderCell: () => <h1> teste</h1>,
   },
   {
     field: 'lastName',
@@ -39,7 +40,12 @@ const columns: GridColDef[] = [
 ]
 
 const rows = [
-  { id: 1, lastName: 'Snow', firstName: 'Jon', age: 35 },
+  {
+    id: 1,
+    lastName: <h1> Teste sfasfas</h1>,
+    firstName: <h1> Teste sfasfas</h1>,
+    age: <h1> Teste</h1>,
+  },
   { id: 2, lastName: 'Lannister', firstName: 'Cersei', age: 42 },
   { id: 3, lastName: 'Lannister', firstName: 'Jaime', age: 45 },
   { id: 4, lastName: 'Stark', firstName: 'Arya', age: 16 },
