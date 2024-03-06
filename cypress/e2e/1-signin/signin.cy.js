@@ -2,6 +2,6 @@
 
 describe('SignIn Page', () => {
   it('Should render signin page correcty', () => {
-    cy.visit('http://localhost:3001')
+    cy.visit('http://localhost:3000')
   })
 })
