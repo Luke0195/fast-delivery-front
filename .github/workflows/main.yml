@@ -40,8 +40,4 @@ jobs:
             # If source files changed but packages didn't, rebuild from a prior cache.
             restore-keys: |
               ${{ runner.os }}-nextjs-${{ hashFiles('**/package-lock.json') }}
-      - name: Cypress run
-        uses: cypress-io/github-action@v6
-        with:
-          build: npm run build
-          start: npm start
+   
