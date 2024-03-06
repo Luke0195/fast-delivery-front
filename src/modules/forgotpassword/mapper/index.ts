@@ -1,5 +1,6 @@
-import { ForgotPasswordParams } from '..'
-
+type ForgotPasswordParams = {
+  email: ''
+}
 export const makeFormDefaultValues = (): ForgotPasswordParams => {
   return { email: '' }
 }
