@@ -1,6 +1,6 @@
 import { Ui } from '@app/modules/signin'
 
-export default function SignIn() {
+export function SignIn() {
   return (
     <>
       <Ui />
