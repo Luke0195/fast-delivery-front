@@ -9,6 +9,14 @@ type AddressData = {
 }
 
 export interface RecipentFormData {
+  id?: string
   name?: string
   address?: AddressData
+}
+
+export interface DataInterface {
+  id: string
+  name: string
+  address_name: string
+  action: any
 }

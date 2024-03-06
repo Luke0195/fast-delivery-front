@@ -1,7 +1,10 @@
 'use client'
 import { PageHeader, Manager, ButtonRoot } from '@app/components'
+import { recipentService, mapDataToDomain, DataInterface } from '../'
 import { GridColDef } from '@mui/x-data-grid'
 import Link from 'next/link'
+import { useEffect, useState } from 'react'
+import { toast } from 'react-toastify'
 
 const columns: GridColDef[] = [
   {
@@ -13,16 +16,15 @@ const columns: GridColDef[] = [
     filterable: false,
   },
   {
-    field: 'firstName',
+    field: 'name',
     headerName: 'Nome',
     width: 400,
     align: 'center',
     headerAlign: 'center',
     filterable: false,
-    renderCell: () => <h1> teste</h1>,
   },
   {
-    field: 'lastName',
+    field: 'address_name',
     headerName: 'Endereço',
     width: 320,
     headerAlign: 'center',
@@ -30,7 +32,7 @@ const columns: GridColDef[] = [
     filterable: false,
   },
   {
-    field: 'actions',
+    field: 'action',
     headerName: 'Ações',
     width: 300,
     headerAlign: 'center',
@@ -57,6 +59,24 @@ const rows = [
 ]
 
 export function Ui() {
+  const [loading, setLoading] = useState<boolean>(false)
+  const [body, setBody] = useState<DataInterface[]>([])
+  const loadData = async () => {
+    setLoading(true)
+    try {
+      const response = await recipentService.getAllRecipents()
+      const parsedData = mapDataToDomain(response.body || [])
+      console.log(parsedData)
+      setBody(parsedData)
+    } catch {
+      toast.error('Não foi possível processar a requisição')
+    } finally {
+      setLoading(false)
+    }
+  }
+  useEffect(() => {
+    loadData()
+  }, [])
   return (
     <>
       <PageHeader
@@ -79,9 +99,9 @@ export function Ui() {
         </div>
         <Manager
           columns={columns}
-          rows={rows}
+          rows={body || []}
           hasChecked={true}
-          loading={false}
+          loading={loading}
         />
       </div>
     </>

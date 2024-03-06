@@ -1,5 +1,6 @@
 import httpClient from '@app/shared/http/httpclient'
 import { RecipentFormData } from '../'
+import { HttResponseData } from '@app/shared/http/interfaces'
 
 class RecipentService {
   constructor() {}
@@ -12,6 +13,17 @@ class RecipentService {
     })
     console.log(response)
     return response.body
+  }
+
+  async getAllRecipents(): Promise<HttResponseData> {
+    const response: any = await httpClient.request({
+      method: 'GET',
+      url: 'recipents',
+    })
+
+    return {
+      body: response.content,
+    } as HttResponseData
   }
 }
 

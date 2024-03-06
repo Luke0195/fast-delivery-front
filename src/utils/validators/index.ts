@@ -12,6 +12,10 @@ class Validator {
       errors[objectValue][fieldName] && errors[objectValue][fieldName].messsage
     )
   }
+
+  isString(value: string): boolean {
+    return typeof value === 'string'
+  }
 }
 
 export default new Validator()
