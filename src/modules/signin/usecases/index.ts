@@ -1,5 +1,6 @@
-import { AuthenticationParams, Account } from '..'
+import { AuthenticationParams } from '..'
+import { AccountModel } from '@app/models/account'
 
 export interface Authenticate {
-  authenticate(params: AuthenticationParams): Promise<Account>
+  authenticate(params: AuthenticationParams): Promise<AccountModel>
 }
