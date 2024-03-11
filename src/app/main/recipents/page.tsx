@@ -1,5 +1,5 @@
 'use client'
-import { Ui } from '@app/modules/recipents'
+import { Ui } from '../../../modules/recipents'
 
 export default function Recipents() {
   return <Ui />

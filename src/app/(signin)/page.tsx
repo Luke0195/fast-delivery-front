@@ -1,9 +1,10 @@
-import { Ui } from '@app/modules/signin'
+import { Ui } from '../../modules/signin'
 
-export function SignIn() {
+export default function SignIn() {
   return (
     <>
       <Ui />
     </>
   )
 }
+

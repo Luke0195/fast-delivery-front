@@ -1,4 +1,4 @@
-import { Ui } from '@app/modules/forgotpassword'
+import { Ui } from '../../modules/forgotpassword'
 
 export default function forgotPassword() {
   return <Ui />
