@@ -1,7 +1,7 @@
 'use client'
 import React from 'react'
 import { render } from '@testing-library/react'
-import { SignIn } from '@app/app/(signin)/page'
+import SignIn from '@app/app/(signin)'
 
 jest.mock('next/navigation', () => ({
   useRouter() {
