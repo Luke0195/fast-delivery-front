@@ -69,7 +69,7 @@ jobs:
       with:
         context: .
         push: true
-        tags: luke0195/contasapp:latest
+        tags: luke0195/fast-feet:latest
         github-token: ${{ secrets.GIT_HUB_TOKEN }}
               
     
