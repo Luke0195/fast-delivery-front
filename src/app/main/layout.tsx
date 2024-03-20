@@ -1,3 +1,4 @@
+'use client'
 import { Header } from '@app/components'
 import { Container } from '@app/components'
 

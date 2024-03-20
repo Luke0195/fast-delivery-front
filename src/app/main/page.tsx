@@ -1,5 +1,5 @@
 'use client'
-import { Ui } from '../../modules/dashboard'
+import { Ui } from '@app/modules/dashboard'
 export default function Dashboard() {
   return <Ui />
 }

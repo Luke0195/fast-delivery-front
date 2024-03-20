@@ -1,3 +1,4 @@
+'use client'
 import { AnimationWrapper, animations } from '@app/shared'
 import { CardRoot, GraphicsRoot } from '@app/components'
 export function Report() {

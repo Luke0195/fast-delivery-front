@@ -1,11 +1,11 @@
 import type { Metadata } from 'next'
 import { ToastContainer } from '@app/libs'
-import { Roboto_Condensed } from 'next/font/google'
+import { Inter } from 'next/font/google'
 
 import './globals.css'
 import 'react-toastify/dist/ReactToastify.css'
 
-const robotoCondensed = Roboto_Condensed({
+const robotoCondensed = Inter({
   subsets: ['latin'],
   display: 'swap',
   adjustFontFallback: false,

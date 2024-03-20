@@ -1,3 +1,4 @@
+'use client'
 import { CardRoot, GraphicsRoot } from '@app/components'
 import { AnimationWrapper, animations } from '@app/shared'
 

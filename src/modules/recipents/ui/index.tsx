@@ -1,4 +1,3 @@
-'use client'
 import { PageHeader, Manager, ButtonRoot } from '@app/components'
 import { recipentService, mapDataToDomain, DataInterface } from '../'
 import { GridColDef } from '@mui/x-data-grid'
