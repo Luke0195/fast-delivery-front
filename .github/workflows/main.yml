@@ -64,11 +64,6 @@ jobs:
         password: ${{ secrets.DOCKER_PASSWORD }}
         ecr: auto
         logout: false
-    - name: Docker Metadata action
-      uses: docker/metadata-action@v5.5.0
-      with:
-        context: workflow
-        github-token: ${{ secrets.GIT_HUB_TOKEN }}
     - name: Build and push Docker images
       uses: docker/build-push-action@v5.1.0
       with:
