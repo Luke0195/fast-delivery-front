@@ -2,13 +2,11 @@ version: '3.9'
 
 services:
   app:
+    image: luke0195/fast-feet:v1
     container_name: fast-feet-app
     ports:
       - '3000:3000'
     command: npm run dev
-    build:
-      context: .
-      dockerfile: Dockerfile
     volumes:
       - .:/app
       - /app/node_modules
