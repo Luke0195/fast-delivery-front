@@ -10,8 +10,9 @@ import { toast } from 'react-toastify'
 import validators from '@app/utils/validators'
 import { useRouter } from 'next/navigation'
 import { Container, PageHeader, InputRoot } from '@app/components'
-import { useForm, yupResolver } from '@app/libs'
+import { yupResolver } from '@app/libs'
 import { useState } from 'react'
+import { useForm } from 'react-hook-form'
 
 export function Ui() {
   const router = useRouter()
